@@ -1,0 +1,3 @@
+select 1, c_custkey
+from customer, orders, lineitem
+where orders.o_custkey = customer.c_custkey and lineitem.l_orderkey = orders.o_orderkey and o_orderdate <date'1997-01-01' and l_shipdate > date'1994-01-01';

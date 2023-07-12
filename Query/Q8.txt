@@ -1,0 +1,3 @@
+select count(*)
+from customer, orders, lineitem, supplier
+where customer.c_custkey = orders.o_custkey and orders.o_orderkey = lineitem.l_orderkey and lineitem.l_suppkey = supplier.s_suppkey and o_orderdate >= date'1995-01-01' and o_orderdate <= date'1996-12-31';

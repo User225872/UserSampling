@@ -1,0 +1,3 @@
+select 1, s_suppkey
+from supplier, partsupp, lineitem
+where l_partkey = ps_partkey and l_suppkey = ps_suppkey and s_suppkey = ps_suppkey;
